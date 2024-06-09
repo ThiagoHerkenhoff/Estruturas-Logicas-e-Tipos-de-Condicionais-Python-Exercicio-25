@@ -1,0 +1,24 @@
+# 25 - Calcule as raízes da equação de 2º grau
+
+import math
+
+a = float(input('Informe o valor de a: '))
+b = float(input('Informe o valor de b: '))
+c = float(input('Informe o valor de c: '))
+
+delta = (b ** 2 - 4 * a * c)
+
+if a == 0:
+    print("Não é uma equação de segundo grau")
+
+elif delta < 0:
+    print("A equação não possue raízes reais.")
+
+elif delta == 0:
+    raiz = (-1 * b + math.sqrt(delta)) / (2 * a)
+    print(f"A equação possui apenas uma raiz quadrada: {raiz} ")
+
+else:
+    raiz_1 = (-1 * b + math.sqrt(delta)) / (2 * a)
+    raiz_2 = (-1 * b - math.sqrt(delta)) / (2 * a)
+    print(f"As raízes da equação são: {raiz_1} e {raiz_2}")
